@@ -17,11 +17,4 @@ Um sistema simples de convite para sair utilizando HTML, CSS e JavaScript, onde 
 
 pedido-irrecusavel-seven.vercel.app
 
-## Autora
 
-Letícia Gomez Pinheiro 
-<p>Linkedin: https://www.linkedin.com/in/leticia-pinheiro-dev/</p>
-<p>GitHub: https://github.com/Leticia-Pinheiro</p>
-<br/>
-
-#
