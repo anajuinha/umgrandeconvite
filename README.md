@@ -1,10 +1,10 @@
-# Pedido Irrecusável
+# Um grande convite
 
 <p align="center">
   <img height=200 src="https://cdn-icons-png.flaticon.com/512/6729/6729451.png">
 </p>
 <h1 align="center">
-  Pedido Irrecusável
+  Um grande convite
 </h1>
 
 
@@ -15,6 +15,6 @@ Um sistema simples de convite para sair utilizando HTML, CSS e JavaScript, onde 
 
 ## Deploy
 
-pedido-irrecusavel-seven.vercel.app
+umgrandeconvite-seven.vercel.app
 
 
