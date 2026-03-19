@@ -40,14 +40,15 @@ h1 {
   text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
 }
 
-/* botões alinhados */
+/* área dos botões (AGORA CONTROLADA) */
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  position: relative;
+  width: 300px;
+  height: 80px;
+  margin: 0 auto;
 }
 
-/* estilo dos botões (AGORA BONITO) */
+/* estilo dos botões */
 button {
   padding: 14px 40px;
   border: none;
@@ -59,6 +60,7 @@ button {
   font-weight: bold;
   letter-spacing: 1px;
   transition: all 0.2s ease;
+  position: absolute;
 }
 
 /* efeito hover */
@@ -67,16 +69,21 @@ button:hover {
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
-/* estado ativo (clique) */
+/* clique */
 button:active {
   transform: scale(0.95);
 }
 
-/* posições iniciais */
+/* SIM fixo (nunca se mexe) */
 #sim {
-  position: relative;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
+/* NÃO começa ao lado */
 #nao {
-  position: relative;
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
