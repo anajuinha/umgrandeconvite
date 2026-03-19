@@ -1,27 +1,34 @@
 const nao = document.getElementById("nao");
 const sim = document.getElementById("sim");
-var isAnimating = false;
 
-nao.addEventListener("mouseover", animateNao);
-nao.addEventListener("click", animateNao);
+let isAnimating = false;
 
-function animateNao(){
-    if (!isAnimating) {
-        isAnimating = true;
-        
-        // Movimento aleatório em X e Y (-200px a 200px)
-        const moveX = Math.floor(Math.random() * 401) - 200;
-        const moveY = Math.floor(Math.random() * 401) - 200;
-        
-        nao.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        nao.style.transition = "all 0.3s ease";
+function fugir() {
+    if (isAnimating) return;
 
-        setTimeout(function() {
-            isAnimating = false;
-        }, 300);
-    }
+    isAnimating = true;
+
+    const largura = window.innerWidth - nao.offsetWidth;
+    const altura = window.innerHeight - nao.offsetHeight;
+
+    const x = Math.random() * largura;
+    const y = Math.random() * altura;
+
+    nao.style.position = "fixed";
+    nao.style.left = x + "px";
+    nao.style.top = y + "px";
+    nao.style.transition = "all 0.2s ease";
+
+    setTimeout(() => {
+        isAnimating = false;
+    }, 200);
 }
 
-sim.addEventListener("click", function(){
+// eventos mais precisos
+nao.addEventListener("mouseenter", fugir);
+nao.addEventListener("click", fugir);
+
+// botão SIM
+sim.addEventListener("click", function () {
     window.open('video.html', '_blank');
 });
