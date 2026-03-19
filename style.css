@@ -45,6 +45,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 
 button {
@@ -55,20 +56,15 @@ button {
   cursor: pointer;
   background: #ff2b2b;
   color: white;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: 0.2s;
 }
 
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255,0,0,0.7);
-}
-
-/* botão SIM fixo */
+/* SIM normal */
 #sim {
   position: relative;
 }
 
-/* botão NÃO começa ao lado e depois foge */
+/* NÃO começa normal */
 #nao {
   position: relative;
 }
