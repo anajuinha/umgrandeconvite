@@ -3,99 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Convite</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
 
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    /* 🎬 vídeo de fundo */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    .container {
-      position: relative;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-    }
-
-    .btn {
-      padding: 12px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      position: absolute;
-      transition: 0.2s;
-      background: red;
-      color: white;
-    }
-
-    #sim {
-      left: 50%;
-      transform: translateX(-120%);
-      position: relative;
-    }
-
-    #nao {
-      left: 60%;
-      top: 60%;
-    }
-
-  </style>
+  <!-- conecta com seu CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- overlay (escurece o fundo) -->
+  <div class="overlay"></div>
 
   <div class="container">
     <h1>Grazi vc sair comigo amanhã?</h1>
-    
-  <div class="buttons">
-  <button id="sim">SIM</button>
-  <button id="nao">NÃO</button>
-</div>
+
+    <div class="buttons">
+      <button id="sim">SIM</button>
+      <button id="nao">NÃO</button>
+    </div>
+  </div>
 
   <script>
     const nao = document.getElementById("nao");
+    const sim = document.getElementById("sim");
 
     function fugir() {
-      const largura = window.innerWidth - 100;
-      const altura = window.innerHeight - 100;
+      const largura = window.innerWidth - nao.offsetWidth;
+      const altura = window.innerHeight - nao.offsetHeight;
 
-      const novaX = Math.random() * largura;
-      const novaY = Math.random() * altura;
+      const x = Math.random() * largura;
+      const y = Math.random() * altura;
 
       nao.style.position = "fixed";
-      nao.style.left = novaX + "px";
-      nao.style.top = novaY + "px";
+      nao.style.left = x + "px";
+      nao.style.top = y + "px";
     }
 
-    nao.addEventListener("mouseover", fugir);
+    // foge antes de clicar
+    nao.addEventListener("mouseenter", fugir);
     nao.addEventListener("click", fugir);
 
-    document.getElementById("sim").addEventListener("click", () => {
+    // botão SIM
+    sim.addEventListener("click", () => {
       window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     });
   </script>
