@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
- background: url("fundo.jpg") no-repeat center center/cover;
+  background: url("fundo.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
