@@ -15,7 +15,7 @@ body {
   position: relative;
 }
 
-/* overlay funcionando corretamente */
+/* overlay escuro */
 .overlay {
   position: fixed;
   top: 0;
@@ -40,34 +40,43 @@ h1 {
   text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
 }
 
-/* área dos botões */
+/* botões alinhados */
 .buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-#sim, #nao {
-  position: relative;
-}
-
+/* estilo dos botões (AGORA BONITO) */
 button {
-  padding: 14px 35px;
+  padding: 14px 40px;
   border: none;
-  border-radius: 30px;
+  border-radius: 999px;
   font-size: 16px;
   cursor: pointer;
   background: #ff2b2b;
   color: white;
-  transition: 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
 }
 
-/* SIM normal */
+/* efeito hover */
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* estado ativo (clique) */
+button:active {
+  transform: scale(0.95);
+}
+
+/* posições iniciais */
 #sim {
   position: relative;
 }
 
-/* NÃO começa normal */
 #nao {
   position: relative;
 }
