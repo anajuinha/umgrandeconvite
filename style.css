@@ -45,6 +45,9 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+#sim, #nao {
   position: relative;
 }
 
